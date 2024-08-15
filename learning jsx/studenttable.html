@@ -16,7 +16,7 @@
 
         function App() {
 
-            let Student = [
+            let students = [
                 {
                     name: 'vijay',
                     age: '24',
@@ -35,23 +35,24 @@
             ]
             return (
                 <>
-                    <h2>Student Details</h2>
+                    <h1>Student Details</h1>
                     <table>
-                        <thead> <tr>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Marks</th>
-                        </tr></thead>
+                        <thead> 
+                        <tr>
+                            <th>NAME</th>
+                            <th>AGE</th>
+                            <th>MARKS</th>
+                        </tr>
+                        </thead>
 
                         <tbody>
-                            {Student.map((num, index) => (
+                            {students.map((student, index) => (
                                 <tr key={index}>
-                                    <td>{num.name}</td>
-                                    <td>{num.age}</td>
-                                    <td>{num.marks}</td>
+                                    <td>{student.name}</td>
+                                    <td>{student.age}</td>
+                                    <td>{student.marks}</td>
                                 </tr>)
                             )}
-
                         </tbody>
 
                     </table>
