@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <script crossorigin="" src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin="" src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React App</title>
+    <style>
+        img {
+            width: 250px;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            width: 150px;
+            padding: 10px;
+            background-color: #f00;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+    <script>"use strict";
+        var IMAGES = ["https://res.cloudinary.com/dl26pbek4/image/upload/v1674557549/assets/yannis-zaugg--7TB_r-NuMo-unsplash_tdmglm.jpg", "https://res.cloudinary.com/dl26pbek4/image/upload/v1674557550/assets/lino-C2SzUyg3PPQ-unsplash_s8a4tg.jpg", "https://res.cloudinary.com/dl26pbek4/image/upload/v1674557550/assets/curioso-photography-QfOhOcrDmvk-unsplash_vgbb3t.jpg", "https://res.cloudinary.com/dl26pbek4/image/upload/v1674620718/assets/pexels-garvin-st-villier-3311574_ds8wrh.jpg"];
+        var Login = function Login() {
+            return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, "Login to Continue"), /*#__PURE__*/React.createElement("form", null, /*#__PURE__*/React.createElement("input", {
+                placeholder: "email"
+            }), /*#__PURE__*/React.createElement("input", {
+                placeholder: "password"
+            }), /*#__PURE__*/React.createElement("button", null, "Login")));
+        };
+        var Home = function Home() {
+            return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, "Welcome to home!"), /*#__PURE__*/React.createElement("h5", null, "Enjoy this catalog of pictures"), IMAGES.map(function (i) {
+                return /*#__PURE__*/React.createElement("img", {
+                    key: i,
+                    src: i
+                });
+            }));
+        };
+        var PremiumAccount = function PremiumAccount() {
+            return /*#__PURE__*/React.createElement("button", null, "Buy Premium");
+        };
+        var App = function App() {
+            var name = "John Doe";
+            var isLoggedIn = true;
+            return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Hello ", name || "Guest", "!"), isLoggedIn && /*#__PURE__*/React.createElement(PremiumAccount, null), isLoggedIn ? /*#__PURE__*/React.createElement(Home, null) : /*#__PURE__*/React.createElement(Login, null));
+        };
+        var rootElement = ReactDOM.createRoot(document.getElementById("root"));
+        rootElement.render( /*#__PURE__*/React.createElement(App, null));
+        //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJJTUFHRVMiLCJMb2dpbiIsIlJlYWN0IiwiY3JlYXRlRWxlbWVudCIsInBsYWNlaG9sZGVyIiwiSG9tZSIsIm1hcCIsImkiLCJrZXkiLCJzcmMiLCJQcmVtaXVtQWNjb3VudCIsIkFwcCIsIm5hbWUiLCJpc0xvZ2dlZEluIiwiRnJhZ21lbnQiLCJyb290RWxlbWVudCIsIlJlYWN0RE9NIiwiY3JlYXRlUm9vdCIsImRvY3VtZW50IiwiZ2V0RWxlbWVudEJ5SWQiLCJyZW5kZXIiXSwic291cmNlcyI6WyJJbmxpbmUgQmFiZWwgc2NyaXB0Il0sInNvdXJjZXNDb250ZW50IjpbIlxuICAgICAgY29uc3QgSU1BR0VTID0gW1xuICAgICAgICBcImh0dHBzOi8vcmVzLmNsb3VkaW5hcnkuY29tL2RsMjZwYmVrNC9pbWFnZS91cGxvYWQvdjE2NzQ1NTc1NDkvYXNzZXRzL3lhbm5pcy16YXVnZy0tN1RCX3ItTnVNby11bnNwbGFzaF90ZG1nbG0uanBnXCIsXG4gICAgICAgIFwiaHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vZGwyNnBiZWs0L2ltYWdlL3VwbG9hZC92MTY3NDU1NzU1MC9hc3NldHMvbGluby1DMlN6VXlnM1BQUS11bnNwbGFzaF9zOGE0dGcuanBnXCIsXG4gICAgICAgIFwiaHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vZGwyNnBiZWs0L2ltYWdlL3VwbG9hZC92MTY3NDU1NzU1MC9hc3NldHMvY3VyaW9zby1waG90b2dyYXBoeS1RZk9oT2NyRG12ay11bnNwbGFzaF92Z2JiM3QuanBnXCIsXG4gICAgICAgIFwiaHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vZGwyNnBiZWs0L2ltYWdlL3VwbG9hZC92MTY3NDYyMDcxOC9hc3NldHMvcGV4ZWxzLWdhcnZpbi1zdC12aWxsaWVyLTMzMTE1NzRfZHM4d3JoLmpwZ1wiXG4gICAgICBdO1xuXG4gICAgICBjb25zdCBMb2dpbiA9ICgpID0+IChcbiAgICAgICAgPGRpdj5cbiAgICAgICAgICA8aDM+TG9naW4gdG8gQ29udGludWU8L2gzPlxuICAgICAgICAgIDxmb3JtPlxuICAgICAgICAgICAgPGlucHV0IHBsYWNlaG9sZGVyPVwiZW1haWxcIiAvPlxuICAgICAgICAgICAgPGlucHV0IHBsYWNlaG9sZGVyPVwicGFzc3dvcmRcIiAvPlxuICAgICAgICAgICAgPGJ1dHRvbj5Mb2dpbjwvYnV0dG9uPlxuICAgICAgICAgIDwvZm9ybT5cbiAgICAgICAgPC9kaXY+XG4gICAgICApO1xuXG4gICAgICBjb25zdCBIb21lID0gKCkgPT4gKFxuICAgICAgICA8ZGl2PlxuICAgICAgICAgIDxoMz5XZWxjb21lIHRvIGhvbWUhPC9oMz5cbiAgICAgICAgICA8aDU+RW5qb3kgdGhpcyBjYXRhbG9nIG9mIHBpY3R1cmVzPC9oNT5cbiAgICAgICAgICB7SU1BR0VTLm1hcCgoaSkgPT4gKFxuICAgICAgICAgICAgPGltZyBrZXk9e2l9IHNyYz17aX0gLz5cbiAgICAgICAgICApKX1cbiAgICAgICAgPC9kaXY+XG4gICAgICApO1xuXG4gICAgICBjb25zdCBQcmVtaXVtQWNjb3VudCA9ICgpID0+IDxidXR0b24+QnV5IFByZW1pdW08L2J1dHRvbj47XG5cbiAgICAgIGNvbnN0IEFwcCA9ICgpID0+IHtcbiAgICAgICAgY29uc3QgbmFtZSA9IFwiSm9obiBEb2VcIjtcbiAgICAgICAgY29uc3QgaXNMb2dnZWRJbiA9IHRydWU7XG5cbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICA8PlxuICAgICAgICAgICAgPGgxPkhlbGxvIHtuYW1lIHx8IFwiR3Vlc3RcIn0hPC9oMT5cbiAgICAgICAgICAgIHtpc0xvZ2dlZEluICYmIDxQcmVtaXVtQWNjb3VudCAvPn1cbiAgICAgICAgICAgIHtpc0xvZ2dlZEluID8gPEhvbWUgLz4gOiA8TG9naW4gLz59XG4gICAgICAgICAgPC8+XG4gICAgICAgICk7XG4gICAgICB9O1xuXG4gICAgICBjb25zdCByb290RWxlbWVudCA9IFJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJyb290XCIpKTtcbiAgICAgIHJvb3RFbGVtZW50LnJlbmRlcig8QXBwIC8+KTtcbiAgICAiXSwibWFwcGluZ3MiOiI7O0FBQ00sSUFBTUEsTUFBTSxHQUFHLENBQ2IsbUhBQW1ILEVBQ25ILDJHQUEyRyxFQUMzRywwSEFBMEgsRUFDMUgsa0hBQWtILENBQ25IO0FBRUQsSUFBTUMsS0FBSyxHQUFHLFNBQVJBLEtBQUtBLENBQUE7RUFBQSxvQkFDVEMsS0FBQSxDQUFBQyxhQUFBLDJCQUNFRCxLQUFBLENBQUFDLGFBQUEsYUFBSSxtQkFBcUIsQ0FBQyxlQUMxQkQsS0FBQSxDQUFBQyxhQUFBLDRCQUNFRCxLQUFBLENBQUFDLGFBQUE7SUFBT0MsV0FBVyxFQUFDO0VBQU8sQ0FBRSxDQUFDLGVBQzdCRixLQUFBLENBQUFDLGFBQUE7SUFBT0MsV0FBVyxFQUFDO0VBQVUsQ0FBRSxDQUFDLGVBQ2hDRixLQUFBLENBQUFDLGFBQUEsaUJBQVEsT0FBYSxDQUNqQixDQUNILENBQUM7QUFBQSxDQUNQO0FBRUQsSUFBTUUsSUFBSSxHQUFHLFNBQVBBLElBQUlBLENBQUE7RUFBQSxvQkFDUkgsS0FBQSxDQUFBQyxhQUFBLDJCQUNFRCxLQUFBLENBQUFDLGFBQUEsYUFBSSxrQkFBb0IsQ0FBQyxlQUN6QkQsS0FBQSxDQUFBQyxhQUFBLGFBQUksZ0NBQWtDLENBQUMsRUFDdENILE1BQU0sQ0FBQ00sR0FBRyxDQUFDLFVBQUNDLENBQUM7SUFBQSxvQkFDWkwsS0FBQSxDQUFBQyxhQUFBO01BQUtLLEdBQUcsRUFBRUQsQ0FBRTtNQUFDRSxHQUFHLEVBQUVGO0lBQUUsQ0FBRSxDQUFDO0VBQUEsQ0FDeEIsQ0FDRSxDQUFDO0FBQUEsQ0FDUDtBQUVELElBQU1HLGNBQWMsR0FBRyxTQUFqQkEsY0FBY0EsQ0FBQTtFQUFBLG9CQUFTUixLQUFBLENBQUFDLGFBQUEsaUJBQVEsYUFBbUIsQ0FBQztBQUFBO0FBRXpELElBQU1RLEdBQUcsR0FBRyxTQUFOQSxHQUFHQSxDQUFBLEVBQVM7RUFDaEIsSUFBTUMsSUFBSSxHQUFHLFVBQVU7RUFDdkIsSUFBTUMsVUFBVSxHQUFHLElBQUk7RUFFdkIsb0JBQ0VYLEtBQUEsQ0FBQUMsYUFBQSxDQUFBRCxLQUFBLENBQUFZLFFBQUEscUJBQ0VaLEtBQUEsQ0FBQUMsYUFBQSxhQUFJLFFBQU0sRUFBQ1MsSUFBSSxJQUFJLE9BQU8sRUFBQyxHQUFLLENBQUMsRUFDaENDLFVBQVUsaUJBQUlYLEtBQUEsQ0FBQUMsYUFBQSxDQUFDTyxjQUFjLE1BQUUsQ0FBQyxFQUNoQ0csVUFBVSxnQkFBR1gsS0FBQSxDQUFBQyxhQUFBLENBQUNFLElBQUksTUFBRSxDQUFDLGdCQUFHSCxLQUFBLENBQUFDLGFBQUEsQ0FBQ0YsS0FBSyxNQUFFLENBQ2pDLENBQUM7QUFFUCxDQUFDO0FBRUQsSUFBTWMsV0FBVyxHQUFHQyxRQUFRLENBQUNDLFVBQVUsQ0FBQ0MsUUFBUSxDQUFDQyxjQUFjLENBQUMsTUFBTSxDQUFDLENBQUM7QUFDeEVKLFdBQVcsQ0FBQ0ssTUFBTSxlQUFDbEIsS0FBQSxDQUFBQyxhQUFBLENBQUNRLEdBQUcsTUFBRSxDQUFDLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=
+    </script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>Hello John Doe!</h1>
+        <button>Buy Premium</button>
+        <div>
+            <h3>Welcome to home!</h3>
+            <h5>Enjoy this catalog of pictures</h5>
+            <img
+                src="https://res.cloudinary.com/dl26pbek4/image/upload/v1674557549/assets/yannis-zaugg--7TB_r-NuMo-unsplash_tdmglm.jpg"><img
+                src="https://res.cloudinary.com/dl26pbek4/image/upload/v1674557550/assets/lino-C2SzUyg3PPQ-unsplash_s8a4tg.jpg"><img
+                src="https://res.cloudinary.com/dl26pbek4/image/upload/v1674557550/assets/curioso-photography-QfOhOcrDmvk-unsplash_vgbb3t.jpg"><img
+                src="https://res.cloudinary.com/dl26pbek4/image/upload/v1674620718/assets/pexels-garvin-st-villier-3311574_ds8wrh.jpg">
+        </div>
+    </div>
+    <script type="text/babel">
+        const IMAGES = [
+            "https://res.cloudinary.com/dl26pbek4/image/upload/v1674557549/assets/yannis-zaugg--7TB_r-NuMo-unsplash_tdmglm.jpg",
+            "https://res.cloudinary.com/dl26pbek4/image/upload/v1674557550/assets/lino-C2SzUyg3PPQ-unsplash_s8a4tg.jpg",
+            "https://res.cloudinary.com/dl26pbek4/image/upload/v1674557550/assets/curioso-photography-QfOhOcrDmvk-unsplash_vgbb3t.jpg",
+            "https://res.cloudinary.com/dl26pbek4/image/upload/v1674620718/assets/pexels-garvin-st-villier-3311574_ds8wrh.jpg"
+        ];
+
+        const Login = () => (
+            <div>
+                <h3>Login to Continue</h3>
+                <form>
+                    <input placeholder="email" />
+                    <input placeholder="password" />
+                    <button>Login</button>
+                </form>
+            </div>
+        );
+
+        const Home = () => (
+            <div>
+                <h3>Welcome to home!</h3>
+                <h5>Enjoy this catalog of pictures</h5>
+                {IMAGES.map((i) => (
+                    <img key={i} src={i} />
+                ))}
+            </div>
+        );
+
+        const PremiumAccount = () => <button>Buy Premium</button>;
+
+        const App = () => {
+            const name = "John Doe";
+            const isLoggedIn = true;
+
+            return (
+                <>
+                    <h1>Hello {name || "Guest"}!</h1>
+                    {isLoggedIn && <PremiumAccount />}
+                    {isLoggedIn ? <Home /> : <Login />}
+                </>
+            );
+        };
+
+        const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+        rootElement.render(<App />);
+    </script>
+</body>
+
+</html>

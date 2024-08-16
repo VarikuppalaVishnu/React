@@ -7,7 +7,7 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <title>car Array</title>
+    <title>Table</title>
 </head>
 
 <body>
@@ -16,12 +16,12 @@
     </div>
 
     <script type="text/babel">
-       function App() {
+        function Cars() {
 
             let Cars = [
                 {
                     name: 'Audi S5 Sportback',
-                    averagespped :"100",
+                    averagespped: "100",
                     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFTDf7J-PThd10nRGbQp8yJjzrD0i7XrH_g&s'
                 },
                 {
@@ -64,8 +64,67 @@
             )
         }
 
-        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+        function StudentPage() {
 
+            let students = [
+                {
+                    name: 'vijay',
+                    age: '24',
+                    marks: '86'
+                },
+                {
+                    name: 'ajay',
+                    age: '23',
+                    marks: '98'
+                },
+                {
+                    name: 'vicky',
+                    age: '24',
+                    marks: '97'
+                },
+            ]
+            return (
+                <>
+                    <h1>Student Details</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NAME</th>
+                                <th>AGE</th>
+                                <th>MARKS</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {students.map((student, index) => (
+                                <tr key={index}>
+                                    <td>{student.name}</td>
+                                    <td>{student.age}</td>
+                                    <td>{student.marks}</td>
+                                </tr>)
+                            )}
+                        </tbody>
+
+                    </table>
+
+                </>
+            )
+        }
+
+        function App() {
+            let showcars = false;
+            if (showcars) {
+                return <Cars />
+            }
+            return (
+                <>
+                <StudentPage />
+                </>
+            )
+        }
+
+        const createRoot = ReactDOM.createRoot(document.getElementById("root"));
+        createRoot.render(<App />)
     </script>
 
 </body>
